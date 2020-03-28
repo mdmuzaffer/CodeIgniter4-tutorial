@@ -34,3 +34,40 @@ php spark serve
 This will launch the server and you can now view your application in your browser at http://localhost:8080.
 OR
 http://localhost/codeigniter4/public/
+
+=> How to create controller and use
+=========================================
+I have created a controller with the name Test and extends BaseController not as old CI_controller
+
+<?php
+
+namespace App\Controllers;
+class Test extends BaseController
+{
+	public function index()
+	{
+		echo "My test";
+		die;
+		return view('welcome_message');
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
