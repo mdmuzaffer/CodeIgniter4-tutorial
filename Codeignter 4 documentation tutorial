@@ -64,12 +64,12 @@ But I can change url esily in CI4 go to the route file and open change here
 $routes->get('/', 'Home::index');
 $routes->get('/test', 'Test::test');
 
+=>How to enable parse error or error reporting
+===============================================
+First of all rename ENV file which is in root folder with .env name(.)
+And add uncomment remove # and then added development mode.
 
-
-
-
-
-
+ CI_ENVIRONMENT = development
 
 
 
