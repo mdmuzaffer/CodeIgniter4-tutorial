@@ -16,10 +16,17 @@ composer update
 => If you used the “–no-dev” option when you created the project, it would be appropriate to do so here too,
 composer update --no-dev.
 
-Initial Configuration & Set Up
+=>Initial Configuration & Set Up
 ================================================
 1. Open the app/Config/App.php file with a text editor and set your base URL. If you need more flexibility, 
 the baseURL may be set within the .env file as app.baseURL=”http://example.com”.
 
 2. If you intend to use a database, open the app/Config/Database.php file with a text editor and set your database settings. 
 Alternately, these could be set in your .env file.
+
+=> Local Development Server
+=====================================
+CodeIgniter 4 comes with a local development server, leveraging PHP’s built-in web server with CodeIgniter routing.
+You can use the serve script to launch it, with the following command line in the main directory:
+
+php spark serve
