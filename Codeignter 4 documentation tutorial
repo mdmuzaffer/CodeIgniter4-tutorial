@@ -8,3 +8,10 @@ It is creating folder with name appstarter in your htdocs / www folder you can r
 2. other comman you can use to creat folder as you wish as well as run time.
 composer create-project codeigniter4/appstarter newcod4 --no-dev // commmand
 
+After run above command then again run next composer update command:=
+
+=> Whenever there is a new release, then from the command line in your project root:
+composer update
+
+=> If you used the “–no-dev” option when you created the project, it would be appropriate to do so here too,
+composer update --no-dev.
