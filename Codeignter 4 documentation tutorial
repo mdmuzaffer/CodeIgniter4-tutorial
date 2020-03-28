@@ -44,7 +44,7 @@ I have created a controller with the name Test and extends BaseController not as
 namespace App\Controllers;
 class Test extends BaseController
 {
-	public function index()
+	public function test()
 	{
 		echo "My test";
 		die;
@@ -53,7 +53,16 @@ class Test extends BaseController
 
 }
 
+=>Route Definitions
+================================
 
+As above mention url will be 
+http://localhost/codeigniter4/public/test/test -- it is correct and working
+But I can change url esily in CI4 go to the route file and open change here
+- path -\app\Config\Routes.php
+
+$routes->get('/', 'Home::index');
+$routes->get('/test', 'Test::test');
 
 
 
