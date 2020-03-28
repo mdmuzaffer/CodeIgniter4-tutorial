@@ -1,7 +1,10 @@
  Installation codeigniter with Composer and run following command:-
  ----------------------------------------------------------------------
 
-1 composer create-project codeigniter4/appstarter --no-dev 
+1 composer create-project codeigniter4/appstarter --no-dev // command
+
 It is creating folder with name appstarter in your htdocs / www folder you can rename and use it.
 
-2. 
+2. other comman you can use to creat folder as you wish as well as run time.
+composer create-project codeigniter4/appstarter newcod4 --no-dev // commmand
+
