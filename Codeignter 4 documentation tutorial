@@ -73,6 +73,48 @@ And add uncomment remove # and then added development mode.
 
 
 
+Database Migrations
+==============================
+Create a migration table in the - app\Models path 
+Run the command - php spark migrate:create users
+it is creating file open the file and add the table fiels 
+--------------------------
+public function up()
+	{
+		$this->forge->addField([
+			'Id' => [
+				'type'           => 'INT',
+				'constraint'     => 5,
+				'unsigned'       => TRUE,
+				'auto_increment' => TRUE
+			],
+			'Name'=> [
+				'type'           => 'VARCHAR',
+				'constraint'     => '100',
+			],
+			'Email' => [
+				'type'           => 'TEXT',
+				'null'           => TRUE,
+			],
+			'Address'=> [
+				'type'           => 'VARCHAR',
+				'constraint'     => '100',
+			],
+			'Mobile'=> [
+				'type'           => 'VARCHAR',
+				'constraint'     => '100',
+			],
+	]);
+	 $this->forge->addKey('Id', TRUE);
+	$this->forge->createTable('users');
+	}
+--------------------------------------------------------
+
+And Then run command for migrate.
+- php spark migrate
+
+
+
 
 
 
