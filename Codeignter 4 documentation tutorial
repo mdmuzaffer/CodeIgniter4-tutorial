@@ -112,8 +112,73 @@ public function up()
 
 And Then run command for migrate.
 - php spark migrate
+php spark migrate -g test -n Blog
+php spark migrate:rollback
 
 
+------------------------------------------------
+Creating Your Model
+-------------------------
+
+<?php namespace App\Models;
+
+use CodeIgniter\Model;
+
+class UserModel extends Model
+{
+	protected $table      = 'users';
+	protected $primaryKey = 'id';
+
+	protected $returnType = 'array';
+	protected $useSoftDeletes = true;
+	
+	protected $allowedFields = ['Name','Email','Address','Mobile'];
+
+	/* protected $useTimestamps = false;
+	protected $createdField  = 'created_at';
+	protected $updatedField  = 'updated_at';
+	protected $deletedField  = 'deleted_at'; */
+
+	protected $validationRules    = [];
+	protected $validationMessages = [];
+	protected $skipValidation     = false;
+}
+
+------------------------------------------
+
+Above create model and used in controller and saved data
+
+Controller:-
+==================
+<?php
+namespace App\Controllers;
+use App\Models\UserModel;
+class Test extends BaseController
+{
+	
+	public function test()
+	{
+		$userModel = new UserModel();
+		$data =[
+        'Name' => 'darth',
+        'Email'    => 'demo@gmail.com',
+        'Address'    => 'Mohali',
+        'Mobile'    => '9771789078'
+		];
+		$userModel->insert($data);
+		
+		return view('pages/home');
+	}
+
+	public function about()
+	{
+		return view('pages/about');
+	}
+	public function contact()
+	{
+		return view('pages/contact');
+	}
+}
 
 
 
